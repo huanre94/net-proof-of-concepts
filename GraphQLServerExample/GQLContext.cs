@@ -5,7 +5,18 @@ namespace GraphQLServerExample
 {
     public class GQLContext : DbContext
     {
-        public GQLContext(DbContextOptions options) : base(options) { }
+        public string DbPath { get; }
+
+        public GQLContext()
+        {
+        }
+
+        public GQLContext(DbContextOptions options) : base(options)
+        {
+            var folder = Environment.SpecialFolder.LocalApplicationData;
+            var path = Environment.GetFolderPath(folder);
+            DbPath = Path.Combine(path, "products.db");
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -14,10 +25,10 @@ namespace GraphQLServerExample
             modelBuilder.Entity<Product>().HasData(products);
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseInMemoryDatabase("ProductDB");
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite($"Data Source={DbPath}");
+        }
 
         public DbSet<Product> Products { get; set; }
 

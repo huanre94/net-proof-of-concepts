@@ -1,6 +1,9 @@
+using GraphQL;
+using GraphQL.Server.Ui.Playground;
 using GraphQLServerExample;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.EntityFrameworkCore;
+using GraphQLServerExample.GraphQL.GraphQLSchema;
+using System;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,12 +12,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<GQLContext>(opt =>
-{
-    opt.UseInMemoryDatabase("ProductDb");
-});
+builder.Services.AddDbContext<GQLContext>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
+builder.Services.AddScoped<AppSchema>();
+builder.Services.AddGraphQL(b => b
+    //.AddSchema<AppSchema>()
+    .AddGraphTypes(Assembly.GetExecutingAssembly())
+    .AddSystemTextJson());
 
 var app = builder.Build();
 
@@ -24,6 +29,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseDeveloperExceptionPage();
+//app.UseWebSockets();
+app.UseGraphQL<AppSchema>();
+app.UseGraphQLPlayground("/", new PlaygroundOptions { GraphQLEndPoint = "/graphql", SubscriptionsEndPoint = "/graphql" });
 
 app.UseHttpsRedirection();
 
