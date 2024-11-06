@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClientExample", "GrpcCl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcServerExample", "GrpcServerExample\GrpcServerExample.csproj", "{BAB590BE-BFC6-48F9-9086-5C0C9A610C19}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XsdImport", "FacturacionSRI\XsdImport.csproj", "{1C96EF65-FD80-4045-A0E0-2CBB7F2ACD45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{BAB590BE-BFC6-48F9-9086-5C0C9A610C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAB590BE-BFC6-48F9-9086-5C0C9A610C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAB590BE-BFC6-48F9-9086-5C0C9A610C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C96EF65-FD80-4045-A0E0-2CBB7F2ACD45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C96EF65-FD80-4045-A0E0-2CBB7F2ACD45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C96EF65-FD80-4045-A0E0-2CBB7F2ACD45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C96EF65-FD80-4045-A0E0-2CBB7F2ACD45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{2F5A8693-0825-4C6E-A545-1D9B36DE47B5} = {150385F2-5F9F-4E9A-BC65-07D8625ED38F}
 		{D6D9794D-03D7-484A-AE95-999DF5E4EB71} = {DAF0157D-F253-447B-A2FD-168CBA3E23AC}
 		{BAB590BE-BFC6-48F9-9086-5C0C9A610C19} = {DAF0157D-F253-447B-A2FD-168CBA3E23AC}
+		{1C96EF65-FD80-4045-A0E0-2CBB7F2ACD45} = {33764B25-0485-432D-928A-07C5180394C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {57F2ECCB-487E-4CF9-B5C2-F0EA05867F8E}
