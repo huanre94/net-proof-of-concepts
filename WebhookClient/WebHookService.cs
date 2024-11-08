@@ -25,4 +25,4 @@ internal class WebHookService : IWebHookService
 }
 
 public record Subscription(string Topic, string Callback);
-public record PublishRequest(string Topic, string Callback);
+public record PublishRequest(string Topic, object Message);

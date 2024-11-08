@@ -24,7 +24,7 @@ app.MapPost("/subscribe", (IWebHookService ws, Subscription sub) =>
 
 app.MapPost("/publish", async (IWebHookService ws, PublishRequest req) =>
 {
-    await ws.PublishMessage(req.Topic, req.Callback);
+    await ws.PublishMessage(req.Topic, req.Message);
 });
 
 app.Run();
