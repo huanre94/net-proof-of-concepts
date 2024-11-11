@@ -1,0 +1,6 @@
+@BackgroundMessaging_HostAddress = http://localhost:5197
+
+GET {{BackgroundMessaging_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -49,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThermostatControlService", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "Publisher\Publisher.csproj", "{8C669B1D-0704-400F-888C-A8F3D9685A9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlipCoinGame", "FlipCoinGame\FlipCoinGame.csproj", "{BA9C70F4-0B13-4FBE-AA25-941EE7F4B971}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlipCoinGame", "FlipCoinGame\FlipCoinGame.csproj", "{BA9C70F4-0B13-4FBE-AA25-941EE7F4B971}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Websockets", "Websockets", "{58CA9A70-9B8C-4999-944E-63A98DCAAA20}"
 EndProject
@@ -67,13 +67,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ideas", "Ideas", "{C6B192DC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Webhook", "Webhook", "{690C05CF-6B23-4CEC-890B-67B251AAB616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebhookServer", "WebhookClient\WebhookServer.csproj", "{DAB67D78-6752-4C48-917C-AA36CA980149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebhookServer", "WebhookClient\WebhookServer.csproj", "{DAB67D78-6752-4C48-917C-AA36CA980149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebhookClient", "WebhookServer\WebhookClient.csproj", "{665FB128-AC17-4CD6-A5FB-E1952BF561B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebhookClient", "WebhookServer\WebhookClient.csproj", "{665FB128-AC17-4CD6-A5FB-E1952BF561B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rest", "Rest", "{01F4021D-6482-40EE-BA4A-6774F6C635BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Soap", "Soap", "{A52F1A0A-2BBC-4CB3-8DF2-12957B9CC4CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundMessaging", "BackgroundMessaging\BackgroundMessaging.csproj", "{9D04D487-6D74-47FE-8E90-9CD3CFC13D63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,6 +159,10 @@ Global
 		{665FB128-AC17-4CD6-A5FB-E1952BF561B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{665FB128-AC17-4CD6-A5FB-E1952BF561B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{665FB128-AC17-4CD6-A5FB-E1952BF561B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D04D487-6D74-47FE-8E90-9CD3CFC13D63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D04D487-6D74-47FE-8E90-9CD3CFC13D63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D04D487-6D74-47FE-8E90-9CD3CFC13D63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D04D487-6D74-47FE-8E90-9CD3CFC13D63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -193,6 +199,7 @@ Global
 		{665FB128-AC17-4CD6-A5FB-E1952BF561B9} = {690C05CF-6B23-4CEC-890B-67B251AAB616}
 		{01F4021D-6482-40EE-BA4A-6774F6C635BA} = {CBAC2033-6AD6-460E-B91B-089F23091A15}
 		{A52F1A0A-2BBC-4CB3-8DF2-12957B9CC4CE} = {CBAC2033-6AD6-460E-B91B-089F23091A15}
+		{9D04D487-6D74-47FE-8E90-9CD3CFC13D63} = {33764B25-0485-432D-928A-07C5180394C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {57F2ECCB-487E-4CF9-B5C2-F0EA05867F8E}
